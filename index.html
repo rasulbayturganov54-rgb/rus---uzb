@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjimon Dastur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-language"></i> Smart Tarjimon</h1>
+            <p class="subtitle">Tez va aniq tarjima qilish</p>
+        </header>
+
+        <main>
+            <div class="translator-box">
+                <!-- Til tanlash va almashish qismi -->
+                <div class="language-controls">
+                    <div class="language-selector">
+                        <label for="fromLang">Qaysi tildan:</label>
+                        <select id="fromLang">
+                            <option value="uz">O'zbekcha</option>
+                            <option value="en">Inglizcha</option>
+                            <option value="ru">Ruscha</option>
+                            <option value="tr">Turkcha</option>
+                        </select>
+                    </div>
+                    
+                    <button id="swapBtn" class="icon-btn" title="Tillarni almashtirish">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    
+                    <div class="language-selector">
+                        <label for="toLang">Qaysi tilga:</label>
+                        <select id="toLang">
+                            <option value="en">Inglizcha</option>
+                            <option value="uz" selected>O'zbekcha</option>
+                            <option value="ru">Ruscha</option>
+                            <option value="tr">Turkcha</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Kirish matni -->
+                <div class="input-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-keyboard"></i> Matn kiriting</h3>
+                        <div class="stats" id="inputStats">Belgilar: 0</div>
+                    </div>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Bu yerga matn kiriting..."
+                        rows="6"
+                    ></textarea>
+                    <div class="text-controls">
+                        <button id="clearBtn" class="control-btn">
+                            <i class="fas fa-trash"></i> Tozalash
+                        </button>
+                        <button id="speakInputBtn" class="control-btn">
+                            <i class="fas fa-volume-up"></i> Tinglash
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Natija -->
+                <div class="output-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-globe"></i> Tarjima natijasi</h3>
+                        <button id="copyBtn" class="control-btn">
+                            <i class="fas fa-copy"></i> Nusxalash
+                        </button>
+                    </div>
+                    <div id="outputText" class="output-text">
+                        <div class="placeholder">Tarjima natijasi shu yerda ko'rinadi...</div>
+                    </div>
+                    <div class="text-controls">
+                        <button id="speakBtn" class="control-btn">
+                            <i class="fas fa-volume-up"></i> Tinglash
+                        </button>
+                        <button id="translateBtn" class="control-btn primary">
+                            <i class="fas fa-sync-alt"></i> Tarjima qilish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha ma'lumotlar -->
+                <div class="info-section">
+                    <div class="info-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Qisqa yo'l</h4>
+                        <p>Tez tarjima uchun <kbd>Ctrl</kbd> + <kbd>Enter</kbd> tugmalarini bosing</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-history"></i>
+                        <h4>So'nggi tarjima</h4>
+                        <p id="lastTranslation">Hali tarjima qilinmadi</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 Smart Tarjimon | Dasturchi: ChatGPT</p>
+            <p class="footer-links">
+                <a href="#"><i class="fab fa-github"></i> GitHub</a> |
+                <a href="#"><i class="fas fa-question-circle"></i> Yordam</a> |
+                <a href="#"><i class="fas fa-cog"></i> Sozlamalar</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
